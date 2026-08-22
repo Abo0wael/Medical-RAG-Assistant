@@ -25,12 +25,12 @@ def ingest_data():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-base-en-v1.5", model_kwargs={'device': device})
     
-    print("Creating vector database in './gen-ai'...")
+    print("Creating vector database in './vector'...")
     # This will create or update the chroma db in the persist_directory
     db = Chroma.from_documents(
         documents,
         embeddings,
-        persist_directory="gen-ai"
+        persist_directory="vector"
     )
     print("Ingestion complete! Vector DB is ready.")
 

@@ -16,7 +16,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-base-en-v1.5", model_kwargs={'device': device})
 
 try:
-    persist_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen-ai")
+    persist_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vector")
     vdb = Chroma(
         persist_directory=persist_dir,
         embedding_function=embeddings,
