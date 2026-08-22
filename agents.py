@@ -33,7 +33,7 @@ def rewitten_query_agent(state: State) -> dict:
     # Initialize LLM dynamically based on the selected model
     model_name = state.get("selected_model")
     if not model_name:
-        model_name = "llama-3.3-70b-versatile"
+        model_name = "openai/gpt-oss-120b"
     
     chat_history_str = ""
     if chat_history:
@@ -86,7 +86,7 @@ def response_agent(state: State) -> dict:
     # Initialize LLM dynamically
     model_name = state.get("selected_model")
     if not model_name:
-        model_name = "llama-3.3-70b-versatile"
+        model_name = "openai/gpt-oss-120b"
         
     api_key = os.environ.get("GROQ_API_KEY")
     llm = ChatGroq(model=model_name, temperature=0.0, api_key=api_key)
