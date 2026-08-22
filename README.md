@@ -39,12 +39,14 @@ pip install -r requirements.txt
 ```
 
 ### 4. Environment Variables
-To connect to the Groq API, you need to set up your API keys.
+To connect to the Groq API and enable LangSmith tracking, you need to set up your API keys.
 1. Copy the example environment file:
    ```bash
    cp .env.example .env
    ```
-2. Open `.env` and replace `your_groq_api_key_here` with your actual [Groq API Key](https://console.groq.com/keys).
+2. Open `.env` and fill in your keys:
+   - `GROQ_API_KEY`: Your [Groq API Key](https://console.groq.com/keys).
+   - `LANGCHAIN_API_KEY`: Your [LangSmith API Key](https://smith.langchain.com/) (optional, for tracing).
 
 ### 5. Run the Application
 Start the Streamlit web server:
