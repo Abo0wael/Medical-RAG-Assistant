@@ -86,7 +86,14 @@ def render_sidebar():
         
         selected_model = st.selectbox(
             "🧠 AI Model",
-            options=["openai/gpt-oss-120b", "groq/compound", "qwen/qwen3.6-27b"],
+            options=[
+                "llama-3.3-70b-versatile",
+                "llama-3.1-70b-versatile",
+                "mixtral-8x7b-32768",
+                "qwen-2.5-32b",
+                "gemma2-9b-it",
+                "llama-3.1-8b-instant"
+            ],
             index=0,
             help="Choose the intelligence level of the AI."
         )
