@@ -1,6 +1,6 @@
-# Wiyse LangGraph RAG Application
+# Medical RAG Assistant
 
-A Retrieval-Augmented Generation (RAG) application built using LangGraph, LangChain, Streamlit, Chroma, HuggingFace Embeddings, and Groq.
+A Retrieval-Augmented Generation (RAG) application built using LangGraph, LangChain, Streamlit, Chroma, HuggingFace Embeddings, and Groq, specialized in answering medical questions.
 
 ## Features
 - **LangGraph Workflow**: Manages the state and flow of the RAG pipeline.
